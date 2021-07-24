@@ -18,31 +18,6 @@ class ViewModelMain : ViewModel() {
         return data
     }
 
-//    fun setDataRequest() {
-//
-//        var data: MutableLiveData<List<com.codingwithrufat.deliveryapptest.ResultsItem?>?> = MutableLiveData()
-//        var api: com.codingwithrufat.deliveryapptest.IApi = ApiClient.getRetrofit()!!.create(com.codingwithrufat.deliveryapptest.IApi::class.java)
-//        var apiCall: Call<List<com.codingwithrufat.deliveryapptest.ResultsItem>> =
-//            api.getFoodInformations("pasta", "1", "64fb3e15382e4e9392adde24f23e0e9a")
-//        apiCall.enqueue(object : Callback<List<com.codingwithrufat.deliveryapptest.ResultsItem>> {
-//            override fun onResponse(
-//                call: Call<List<com.codingwithrufat.deliveryapptest.ResultsItem>>,
-//                response: Response<List<com.codingwithrufat.deliveryapptest.ResultsItem>>
-//            ) {
-//                if (response.isSuccessful) {
-//                    data.value = response.body()
-//                    Log.d(TAG, "onResponse: Api Gelir")
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<List<com.codingwithrufat.deliveryapptest.ResultsItem>>, t: Throwable) {
-//                Log.d(TAG, "onResponse: Api Gelmir")
-//            }
-//
-//        })
-//
-//    }
-
     fun getDeliveryData(){
 
         val api = ApiClient.getRetrofit()!!.create(IApi::class.java)
